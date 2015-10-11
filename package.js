@@ -1,7 +1,7 @@
 Package.describe({
 	name: 'jorisroling:orion-online',
 	summary: 'Users Online in Orion',
-	version: '0.0.2',
+	version: '0.0.3',
 	git: 'https://github.com/jorisroling/orion-online'
 });
 
@@ -10,6 +10,7 @@ Package.onUse(function(api) {
 	api.use(['meteor-platform', 'orionjs:base@1.5.0','nicolaslopezj:roles@1.5.2']);
 	api.use(['konecty:multiple-instances-status@1.0.3'],'server');
 	api.use(['konecty:user-presence@1.2.6']);
+	api.use(['utilities:avatar@0.9.2']);
 
 	api.addAssets(['images/led-red.png','images/led-orange.png','images/led-green.png'], 'client');
 
