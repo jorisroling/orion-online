@@ -1,0 +1,58 @@
+<template name="jorisroling_orionOnline_bootstrap">
+  {{# Layout template="orionBootstrapSmallContentOffset" }}
+    {{# Layout template="orionBootstrapTitle" }}
+      Users <small>online</small>
+    {{/ Layout }}
+    <!-- {{# Layout template="orionBootstrapContentContainer" }} -->
+		<div id="orionOnline">
+			<table class="table table-condensed">
+				<thead>
+					<tr>
+						<th>
+							#
+						</th>
+						<th>
+						</th>
+						<th>
+							Name
+						</th>
+						<th>
+							E-mail
+						</th>
+						<th>
+							Status
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each users}}
+						<tr>
+							<th scope="row" style="vertical-align:middle">
+								{{_index}}
+							</th>
+							<td>
+						      {{#if profile.picture.url}}
+						        <div class="avatar avatar-extra-small avatar-circle">
+						          <img class="avatar-image" src="{{profile.picture.url}}" alt="avatar" onerror="this.style.display='none';">
+						        </div>
+						      {{else}}
+						        {{> avatar userId=_id shape="circle" size="extra-small" class=""}}
+						      {{/if}}
+							</td>
+							<td style="vertical-align:middle">
+								{{profile.name}}
+							</td>
+							<td style="vertical-align:middle">
+								{{emails.[0].address}}
+							</td>
+							<td style="vertical-align:middle">
+								<img src="/packages/jorisroling_orion-online/images/led-{{led}}.png" width="16" height="16">
+							</td>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+    <!-- {{/ Layout }} -->
+  {{/ Layout }}
+</template>
