@@ -1,7 +1,3 @@
-Avatar.setOptions({
-	generateCSS: false
-});
-
 /**
  * Init the template name variable
  */
