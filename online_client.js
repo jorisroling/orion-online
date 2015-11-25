@@ -48,7 +48,16 @@ ReactiveTemplates.helpers('orionOnline', {
 		default:
 			return 'red';
 		}
-	}
+	},
+	aemail: function() {
+		// console.log(this);
+		if (this.emails && this.emails.length && this.emails[0].address) {
+			return this.emails[0].address;
+		} else if (this.services && this.services.facebook && this.services.facebook.email) {
+			return this.services.facebook.email;
+		}
+		return '';
+	},
 });
 
 ReactiveTemplates.events('orionOnline', {

@@ -18,6 +18,6 @@ Meteor.publish('orionOnline',function() {
 		this.ready();
 		return;
 	}
-	return Meteor.users.find(onlineQuery,{fields:{emails:1,profile:1,status:1}});
+	return Meteor.users.find(onlineQuery,{fields:{emails:1,profile:1,status:1,'services.twitter.profile_image_url_https':1,'services.facebook.id':1,'services.google.picture':1,'services.github.username':1,'services.instagram.profile_picture':1,'services.linkedin.pictureUrl':1}});
 });
 
