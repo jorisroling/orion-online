@@ -1,13 +1,13 @@
 Package.describe({
 	name: 'jorisroling:orion-online',
 	summary: 'Users Online in Orion',
-	version: '0.0.12',
+	version: '0.0.13',
 	git: 'https://github.com/jorisroling/orion-online'
 });
 
 Package.onUse(function(api) {
 	api.versionsFrom('1.0');
-	api.use(['meteor-platform', 'meteorhacks:npm@1.5.0','orionjs:base@1.6.0','nicolaslopezj:roles@2.0.0']);
+	api.use(['meteor-platform', 'orionjs:base@1.6.0','nicolaslopezj:roles@2.0.0']);
 	api.use(['konecty:multiple-instances-status@1.0.3'],'server');
 	api.use(['konecty:user-presence@1.2.6']);
 	api.use(['utilities:avatar@0.9.2']);

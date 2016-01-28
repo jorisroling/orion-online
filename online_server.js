@@ -1,4 +1,4 @@
-var os = Meteor.npmRequire('os')
+var os = Npm.require('os');
 var onlineQuery={$and:[{status:{$exists:true}},{status:{$type:2}},{status:{$ne:'offline'}}]};
 
 Meteor.startup(function() {
