@@ -32,7 +32,7 @@ ReactiveTemplates.helpers('orionOnline', {
 	users: function() {
 		if (Roles.userHasRole(Meteor.userId(),'admin')) {
 	        var index = 0;
-	        var users = Users.find({},{sort:{'profile.name':1}});
+	        var users = Meteor.users.find({},{sort:{'profile.name':1}});
 	        return users.map(function(user, index, cursor) {
 	            user._index = ++index;
 	            return user;
